@@ -29,6 +29,19 @@ namespace WPF_Stroop_Effect
             InitColors();
             InitNames();
             NextColor();
+            CreateShade();
+        }
+
+        private void CreateShade()
+        {
+            //TextBlock textBlockShade = new TextBlock();
+            //textBlockShade = textBlock1;
+            //Thickness m = textBlockShade.Margin;
+            //m.Top += 5;
+            //m.Left += 5;
+            //textBlockShade.Margin = m;
+            //textBlockShade.Foreground = Brushes.Black;
+            //Canvas.SetZIndex(textBlockShade, (int)1);
         }
 
 
@@ -36,16 +49,26 @@ namespace WPF_Stroop_Effect
         private void InitColors()
         {
             colors = new List<Color>();
-            colors.Add(Colors.Red);
             colors.Add(Colors.Blue);
+            colors.Add(Colors.Brown);
+            colors.Add(Colors.Red);
+            colors.Add(Colors.Purple);
+            colors.Add(Colors.Gray);
+            colors.Add(Colors.Yellow);
+            colors.Add(Colors.Black);
             colors.Add(Colors.Green);
         }
 
         private void InitNames()
         {
             colorNames = new List<string>();
-            colorNames.Add("Red");
             colorNames.Add("Blue");
+            colorNames.Add("Brown");
+            colorNames.Add("Red");
+            colorNames.Add("Purple");
+            colorNames.Add("Gray");
+            colorNames.Add("Yellow");
+            colorNames.Add("Black");
             colorNames.Add("Green");
         }
         #endregion
@@ -53,6 +76,7 @@ namespace WPF_Stroop_Effect
         private void textBlock1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             NextColor();
+            CreateShade();
         }
 
         private void NextColor()
@@ -72,7 +96,7 @@ namespace WPF_Stroop_Effect
             do
             {
                 j = rdm.Next(0, colors.Count);
-            } while (j == indexC);
+            } while (j == indexC && j == index);
             indexC = j;
 
             textBlock1.Foreground = new SolidColorBrush(colors[indexC]);

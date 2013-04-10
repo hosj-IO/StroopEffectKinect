@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBlock Height="197" HorizontalAlignment="Left" Margin="10,10,0,0" Name="textBlock1" Text="test" VerticalAlignment="Top" MouseLeftButtonUp="textBlock1_MouseLeftButtonUp" FontSize="72" Panel.ZIndex="50" Width="493" />
+        <TextBlock Height="197" HorizontalAlignment="Left" Name="textBlock1" Text="test" VerticalAlignment="Top" MouseLeftButtonUp="textBlock1_MouseLeftButtonUp" FontSize="72" Panel.ZIndex="50" Width="493" />
+        <TextBlock Height="23" Margin="12,276,462,0" Name="textBlock2" Text="Score: " VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="47,276,0,0" Name="textBlockScore" Text="TextBlock" VerticalAlignment="Top" />
     </Grid>
 </Window>
